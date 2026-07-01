@@ -1,0 +1,54 @@
+namespace firstclass
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            // ($" result = {num1 * num2}")
+
+            Console.WriteLine("welcome to my simple calculator");
+            int n = 0;
+            int b = 0;
+            while (true)
+            {
+                Console.WriteLine("select your operation (+, - , * , /) or enter x to exit ");
+                string operation = Console.ReadLine();
+                if (operation == "x")
+                {
+                    Console.WriteLine("goodbye!");
+                    break;
+                }
+
+                if (operation == "+" || operation == "-" || operation == "*" || operation == "/")
+                {
+                    Console.WriteLine("write your first number");
+                    n = int.Parse(Console.ReadLine());
+
+                    Console.WriteLine("write your second number");
+
+                    b = int.Parse(Console.ReadLine());
+
+                }
+                if (operation == "+")
+                { Console.WriteLine($" result = {n + b}"); }
+
+                else if (operation == "-")
+                { Console.WriteLine($" result = {n - b}"); }
+
+                else if (operation == "*")
+                { Console.WriteLine($" result = {n * b}"); }
+
+                else if (operation == "/")
+                    if (b == 0)
+                    { Console.WriteLine("You cannot use zero in division"); }
+                    else { Console.WriteLine($" result = {n / b}"); }
+                   24
+            }
+
+
+
+        }
+    }
+}
